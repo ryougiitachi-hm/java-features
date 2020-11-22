@@ -47,5 +47,6 @@
 	
 	<modules>
 		<module>features-module</module>
-	</modules>
+    <module>features-commons</module>
+  </modules>
 </project>
