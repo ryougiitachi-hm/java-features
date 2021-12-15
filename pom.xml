@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-	
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+		 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		 xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>per.itachi.java.features</groupId>
 	<artifactId>java-features</artifactId>
@@ -16,6 +17,7 @@
 		<maven.compiler.target>1.8</maven.compiler.target>
 		<junit.version>4.12</junit.version>
 		<slf4j.version>1.7.25</slf4j.version>
+		<log4j2.version>2.13.3</log4j2.version>
 		<logback.version>1.2.3</logback.version>
 		<lombok.version>1.18.20</lombok.version>
 	</properties>
@@ -30,8 +32,22 @@
 			</dependency>
 			<dependency>
 				<groupId>org.slf4j</groupId>
-				<artifactId>slf4j-api</artifactId>
+				<artifactId>slf4j-parent</artifactId>
 				<version>${slf4j.version}</version>
+				<type>pom</type>
+				<scope>import</scope>
+			</dependency>
+			<dependency>
+				<groupId>org.apache.logging.log4j</groupId>
+				<artifactId>log4j-bom</artifactId>
+				<version>${log4j2.version}</version>
+				<type>pom</type>
+				<scope>import</scope>
+			</dependency>
+			<dependency>
+				<groupId>org.projectlombok</groupId>
+				<artifactId>lombok</artifactId>
+				<version>${lombok.version}</version>
 			</dependency>
 			<dependency>
 				<groupId>ch.qos.logback</groupId>
@@ -48,6 +64,10 @@
 	
 	<modules>
 		<module>features-module</module>
-    <module>features-commons</module>
-  </modules>
+    	<module>features-commons</module>
+        <module>features-locks</module>
+		<module>features-thread</module>
+		<module>features-collection</module>
+		<module>features-atomic</module>
+	</modules>
 </project>
