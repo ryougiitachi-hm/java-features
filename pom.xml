@@ -20,6 +20,8 @@
 		<log4j2.version>2.13.3</log4j2.version>
 		<logback.version>1.2.3</logback.version>
 		<lombok.version>1.18.20</lombok.version>
+		<openjdk.jol.version>0.16</openjdk.jol.version>
+		<openjdk.jmc.version>8.1.0</openjdk.jmc.version>
 	</properties>
 	
 	<dependencyManagement>
@@ -58,6 +60,17 @@
 				<groupId>ch.qos.logback</groupId>
 				<artifactId>logback-classic</artifactId>
 				<version>${logback.version}</version>
+			</dependency>
+			<!-- openjdk -->
+			<dependency>
+				<groupId>org.openjdk.jol</groupId>
+				<artifactId>jol-core</artifactId>
+				<version>${openjdk.jol.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.openjdk.jol</groupId>
+				<artifactId>jol-cli</artifactId>
+				<version>${openjdk.jol.version}</version>
 			</dependency>
 		</dependencies>
 	</dependencyManagement>
