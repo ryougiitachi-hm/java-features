@@ -82,5 +82,7 @@
 		<module>features-thread</module>
 		<module>features-collection</module>
 		<module>features-atomic</module>
+		<module>features-number</module>
+		<module>features-util</module>
 	</modules>
 </project>

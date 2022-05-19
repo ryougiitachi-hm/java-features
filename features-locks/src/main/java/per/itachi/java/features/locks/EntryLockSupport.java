@@ -11,7 +11,7 @@ public class EntryLockSupport {
 
     public static void main(String[] args) {
         showCurrentThreadBlocker();
-//        park();
+        park();
 //        parkNanos();
 //        parkUntil();
         unpark();
