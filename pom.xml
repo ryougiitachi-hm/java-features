@@ -85,5 +85,6 @@
 		<module>features-reflect</module>
 		<module>features-number</module>
 		<module>features-util</module>
+		<module>features-regex</module>
 	</modules>
 </project>
