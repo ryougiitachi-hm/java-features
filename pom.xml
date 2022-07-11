@@ -86,5 +86,6 @@
 		<module>features-number</module>
 		<module>features-util</module>
 		<module>features-regex</module>
+		<module>features-net</module>
 	</modules>
 </project>
