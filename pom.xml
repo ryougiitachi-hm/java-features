@@ -16,6 +16,7 @@
 		<maven.compiler.source>1.8</maven.compiler.source>
 		<maven.compiler.target>1.8</maven.compiler.target>
 		<junit.version>4.12</junit.version>
+		<mockito.version>4.3.1</mockito.version>
 		<slf4j.version>1.7.25</slf4j.version>
 		<log4j2.version>2.13.3</log4j2.version>
 		<logback.version>1.2.3</logback.version>
@@ -30,7 +31,13 @@
 				<groupId>junit</groupId>
 				<artifactId>junit</artifactId>
 				<version>${junit.version}</version>
-				<scope>test</scope>
+			</dependency>
+			<dependency>
+				<groupId>org.mockito</groupId>
+				<artifactId>mockito-bom</artifactId>
+				<version>${mockito.version}</version>
+				<type>pom</type>
+				<scope>import</scope>
 			</dependency>
 			<dependency>
 				<groupId>org.slf4j</groupId>
@@ -88,5 +95,9 @@
 		<module>features-regex</module>
 		<module>features-net</module>
         <module>features-time</module>
+		<module>features-nio</module>
+        <module>features-custom-file</module>
+        <module>features-beans</module>
+        <module>features-crypto</module>
     </modules>
 </project>
