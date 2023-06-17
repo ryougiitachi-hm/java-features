@@ -23,6 +23,7 @@
 		<lombok.version>1.18.20</lombok.version>
 		<openjdk.jol.version>0.16</openjdk.jol.version>
 		<openjdk.jmc.version>8.1.0</openjdk.jmc.version>
+		<graalvm.js.version>21.3.3</graalvm.js.version>
 	</properties>
 	
 	<dependencyManagement>
@@ -79,6 +80,22 @@
 				<artifactId>jol-cli</artifactId>
 				<version>${openjdk.jol.version}</version>
 			</dependency>
+			<!-- js engine, Nashorn JavaScript engine was removed since 15  -->
+			<dependency>
+				<groupId>org.graalvm.js</groupId>
+				<artifactId>js</artifactId>
+				<version>${graalvm.js.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.graalvm.js</groupId>
+				<artifactId>js-scriptengine</artifactId>
+				<version>${graalvm.js.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.graalvm.js</groupId>
+				<artifactId>js-launcher</artifactId>
+				<version>${graalvm.js.version}</version>
+			</dependency>
 		</dependencies>
 	</dependencyManagement>
 	
@@ -99,5 +116,6 @@
         <module>features-custom-file</module>
         <module>features-beans</module>
         <module>features-crypto</module>
-    </modules>
+		<module>features-script</module>
+	</modules>
 </project>
